@@ -6,32 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div>div {
-            margin-left: .5rem;
-            padding-left: .25rem;
-            border-left: 1px solid black;
+        .list-item {
+            border: 1px solid black;
+            width: 400px;
+            margin-top: 10px;
         }
 
-        div {
-            color: black;
+        .list-item:hover {
+            text-decoration: line-through;
         }
     </style>
 </head>
 
 <body>
 
+    <form class="form">
+        <label for="item-input">New Todo</label>
+        <input class="item-input" type="text">
+        <button type="submit">Submit</button>
+    </form>
 
-    <div class="grand_parent">
-        Grand Parent
-        <div>
-            Parent One
-            <div>Child One</div>
-            <div>Child Two</div>
-        </div>
-        <div>
-            Parent Two
-        </div>
+    <div class="list">
     </div>
+
 
     <script src="./index.js"></script>
 
