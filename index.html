@@ -6,30 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .list-item {
-            border: 1px solid black;
-            width: 400px;
-            margin-top: 10px;
+        button {
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            margin-left: 20px;
+            border-radius: 20px;
         }
 
-        .list-item:hover {
-            text-decoration: line-through;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: greenyellow;
+            height: 100vh;
+        }
+
+        .modal {
+            background: greenyellow;
+            border-radius: 20px;
+            height: 200px;
+            width: 400px;
+            border: 1px solid black;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+
+        .overlay {
+            position: absolute;
+            background-color: grey;
+            opacity: 30%;
+            height: 100vh;
+            width: 100vw;
+            display: none;
+        }
+
+        .visible {
+            display: flex;
         }
     </style>
 </head>
 
 <body>
-
-    <form class="form">
-        <label for="item-input">New Todo</label>
-        <input class="item-input" type="text">
-        <button type="submit">Submit</button>
-    </form>
-
-    <div class="list">
+    <div class="overlay"></div>
+    <div class="modal" role="modal">
+        <h1>This is the modal</h1>
+        <button class="closemodal">Close Modal</button>
     </div>
-
-
+    <button class="btn">Open Modal</button>
     <script src="./index.js"></script>
 
 </body>

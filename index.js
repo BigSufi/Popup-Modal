@@ -1,19 +1,14 @@
-const formInputElement = document.querySelector(".form");
-const inputField = document.querySelector(".item-input");
-const list = document.querySelector(".list");
+const openModal = document.querySelector(".btn");
+const closeModal = document.querySelector(".closemodal");
+const overLay = document.querySelector(".overlay");
+const realModal = document.querySelector(".modal");
 
-formInputElement.addEventListener("submit", (e) => {
-  e.preventDefault();
+openModal.addEventListener("click", () => {
+  realModal.classList.add("visible");
+  overLay.classList.add("visible");
+});
 
-  const item = document.createElement("div");
-  item.innerText = inputField.value;
-  item.classList.add("list-item");
-
-  list.appendChild(item);
-
-  item.addEventListener("click", () => {
-    list.removeChild(item);
-  });
-
-  inputField.value = "";
+closeModal.addEventListener("click", () => {
+  realModal.classList.remove("visible");
+  overLay.classList.remove("visible");
 });
