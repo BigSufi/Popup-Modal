@@ -8,7 +8,13 @@ openModal.addEventListener("click", () => {
   overLay.classList.add("visible");
 });
 
-closeModal.addEventListener("click", () => {
+closeModal.addEventListener("click", () => handleRemoval());
+
+overLay.addEventListener("click", () => {
+  handleRemoval();
+});
+
+const handleRemoval = () => {
   realModal.classList.remove("visible");
   overLay.classList.remove("visible");
-});
+};
